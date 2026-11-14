@@ -23,7 +23,7 @@ const T = {
     dl2_t: "Titik api mentah dari NASA FIRMS (CSV)",
     dl2_d: "Ambil titik api asli untuk wilayah & tanggal pilihan langsung dari FIRMS API. Butuh MAP_KEY gratis milik Anda (tidak disimpan).",
     dl2_b: "⬇ Ambil & unduh titik api", lbl_src: "Sensor", h_method: "Bagaimana harmonisasinya?",
-    foot: "Data: NASA FIRMS (MODIS C6.1, VIIRS 375 m S-NPP/NOAA-20/NOAA-21), batas provinsi geoBoundaries (CC BY 4.0), peta dasar © OpenStreetMap. Dibuat oleh Tim Occupy Mars untuk NASA Space Apps Challenge 2026. NASA tidak mendukung (endorse) proyek ini.",
+    foot: "Data: NASA FIRMS (MODIS C6.1, VIIRS 375 m S-NPP/NOAA-20/NOAA-21), batas provinsi geoBoundaries (CC BY 4.0), peta dasar © kontributor OpenStreetMap. Dibuat oleh Tim Occupy Mars untuk NASA Space Apps Challenge 2026. NASA tidak mendukung (endorse) proyek ini.",
     all_idn: "Seluruh Indonesia", island: "Pulau", province: "Provinsi", box: "Kotak gambar", circle: "Radius",
     cells: "sel grid", t_total: "Total titik api", t_total_d: "setara MODIS, {a}–{b}",
     t_peak: "Puncak musim api", t_peak_d: "bulan dengan median tertinggi",
@@ -190,8 +190,8 @@ function cellsInCircle(lat, lon, km) {
 // ---------------------------------------------------------------- peta
 function initMap() {
   map = L.map("map", { zoomSnap: 0.5, preferCanvas: true }).fitBounds([[-11, 95], [6, 141]]);
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/">CARTO</a>', maxZoom: 12, subdomains: "abcd",
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors', maxZoom: 12,
   }).addTo(map);
   cellLayer = L.layerGroup().addTo(map);
   provLayer = L.geoJSON(PROV, {

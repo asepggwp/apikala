@@ -72,7 +72,7 @@ docs/                        static web app (GitHub Pages) (Leaflet + plain JS/S
   (FIRMS) (https://earthdata.nasa.gov/firms), part of NASA's Earth Science Data and Information System (ESDIS).*
   MODIS Collection 6.1 (MCD14), VIIRS 375 m (VNP14IMG, VJ114IMG, VJ214IMG).
 * Province boundaries: geoBoundaries IDN ADM1, CC BY 4.0 (Runfola et al. 2020).
-* Basemap: © OpenStreetMap contributors, © CARTO. Map library: Leaflet (BSD-2).
+* Basemap: © OpenStreetMap contributors. Map library: Leaflet (BSD-2).
 * NASA does not endorse this project.
 
 ## Use of Super Intelligence (SI) tools
