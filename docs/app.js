@@ -39,6 +39,12 @@ const T = {
     raw_need: "Isi MAP_KEY dan pilih wilayah dulu.", raw_long: "Rentang maksimum 60 hari.",
     raw_busy: "Mengambil {i}/{n}…", raw_ok: "Selesai: {n} titik di dalam wilayah.", raw_cors: "Peramban memblokir permintaan langsung (CORS). Buka tautan berikut satu per satu (masing-masing ≤5 hari, kotak pembatas wilayah):",
     show_rawv: "tampilkan VIIRS mentah (belum diharmonisasi)",
+    h_sip: "Cek eksternal: titik api vs luas karhutla resmi",
+    sip_note: "Setiap titik = satu provinsi dalam satu tahun (2018–2024). Sumbu log. Sumber luas: SIPONGI KEMENHUT.",
+    sip_x: "titik api harmonis / tahun", sip_y: "luas terbakar resmi (ha)", sip_sel: "provinsi terpilih",
+    sip_r: "Korelasi (log, {n} provinsi-tahun): <b>r = {r}</b> · Spearman ρ = {s} · nasional per tahun r = {rn}",
+    sip_26: "Kenaikan Jan–Jul 2026 dibanding tahun sebelumnya", sip_c1: "SiPongi (luas)", sip_c2: "ApiKala (titik api)",
+    sip_ok: "Arah perubahan sama di ketiga perbandingan: 2026 memang lebih parah. Besarnya berbeda karena titik api ≠ luas terbakar.",
     med: "median", hl: "disorot", harm: "harmonis", raw_m: "MODIS mentah", raw_v: "VIIRS mentah",
   },
   en: {
@@ -76,6 +82,12 @@ const T = {
     raw_need: "Enter a MAP_KEY and choose an area first.", raw_long: "Maximum range is 60 days.",
     raw_busy: "Fetching {i}/{n}…", raw_ok: "Done: {n} hotspots inside the area.", raw_cors: "The browser blocked the direct request (CORS). Open these links one by one (each ≤5 days, area bounding box):",
     show_rawv: "show raw VIIRS (not harmonized)",
+    h_sip: "External check: hotspots vs official burned area",
+    sip_note: "Each dot = one province in one year (2018–2024). Log axes. Burned area source: SIPONGI KEMENHUT (Indonesian Ministry of Forestry).",
+    sip_x: "harmonized hotspots / year", sip_y: "official burned area (ha)", sip_sel: "selected province",
+    sip_r: "Correlation (log, {n} province-years): <b>r = {r}</b> · Spearman ρ = {s} · national by year r = {rn}",
+    sip_26: "Jan–Jul 2026 increase vs earlier years", sip_c1: "SiPongi (area)", sip_c2: "ApiKala (hotspots)",
+    sip_ok: "Same direction in all three comparisons: 2026 really is worse. Magnitudes differ because hotspots ≠ burned area.",
     med: "median", hl: "highlighted", harm: "harmonized", raw_m: "raw MODIS", raw_v: "raw VIIRS",
   },
 };
@@ -90,7 +102,7 @@ const DIV = ["#184f95", "#3987e5", "#9ec5f4", "#ecebe6", "#f5b9a3", "#e2674a", "
 const DIV_BRK = [-0.75, -0.5, -0.2, 0.2, 1, 3]; // (H/median - 1)
 
 const S = { lang: (navigator.language || "en").toLowerCase().startsWith("id") ? "id" : "en", view: "jumlah", showNum: false, sel: null, areaName: "", areaKind: "", aoi: null, bbox: null, hl: null };
-let META, GRID, CELLS, PROV, map, cellLayer, provLayer, aoiLayer;
+let SIP = null, META, GRID, CELLS, PROV, map, cellLayer, provLayer, aoiLayer;
 let CELLINFO; // per sel: {prov, pulau, lat, lon, data:[m,M,V,...]}
 let NM, YM0, MV0, M_LAST, PART;
 
@@ -104,7 +116,8 @@ const quant = (a, q) => { const b = a.filter((x) => x != null).sort((p, q2) => p
 
 // ---------------------------------------------------------------- muat data
 Promise.all(["meta", "grid", "cells"].map((f) => fetch(`data/${f}.json`).then((r) => r.json())).concat(fetch("data/provinsi.geojson").then((r) => r.json())))
-  .then(([meta, grid, cells, prov]) => { META = meta; GRID = grid; CELLS = cells; PROV = prov; init(); })
+  .then(([meta, grid, cells, prov]) => { META = meta; GRID = grid; CELLS = cells; PROV = prov;
+    return fetch("data/sipongi.json").then((r) => (r.ok ? r.json() : null)).catch(() => null).then((sp) => { SIP = sp; init(); }); })
   .catch((e) => { document.querySelector(".content").innerHTML = `<p class="bad">Gagal memuat data: ${e}</p>`; });
 
 function init() {
@@ -294,6 +307,7 @@ function render() {
   renderSeason(A, years);
   renderYears(A, years);
   renderMethod();
+  renderSip();
   // peta: total per sel pada rentang tahun (rata-rata per tahun → skala bulanan sama dengan legenda? pakai skala sendiri)
   const i0 = Math.max(0, idx(years[0], 1)), i1 = Math.min(M_LAST, idx(years[years.length - 1], 12));
   const tot = {}; let tmax = 0;
@@ -484,6 +498,36 @@ function renderMethod() {
     <h3>${id ? "Hasil uji (leave-one-year-out)" : "Validation (leave-one-year-out)"}</h3>
     <div class="cal-wrap"><table><tr><th></th><th>R² ${id ? "harmonis" : "harmonized"}</th><th>Bias</th><th>${id ? "Galat median" : "Median error"}</th><th>Bias VIIRS ${id ? "mentah" : "raw"}</th><th>n</th></tr>${vrows}</table></div>
     <p class="note">${id ? "Data diolah" : "Data processed"}: ${META.dibuat} · ${id ? "data s.d." : "data to"} ${META.tanggal_data}</p>`;
+}
+
+function renderSip() {
+  if (!SIP) return; $("#card-sip").hidden = false;
+  const W = 420, H = 300, pad = { l: 56, r: 26, t: 10, b: 40 };
+  const pts = SIP.titik.filter((p) => !p.jan_jul);
+  const lx = pts.map((p) => Math.log10(p.h)), ly = pts.map((p) => Math.log10(p.ha));
+  const x0 = Math.floor(Math.min(...lx)), x1 = Math.ceil(Math.max(...lx)), y0 = Math.floor(Math.min(...ly)), y1 = Math.ceil(Math.max(...ly));
+  const sx = (v) => pad.l + (W - pad.l - pad.r) * (Math.log10(v) - x0) / (x1 - x0), sy = (v) => H - pad.b - (H - pad.t - pad.b) * (Math.log10(v) - y0) / (y1 - y0);
+  let g = "";
+  for (let e = x0; e <= x1; e++) g += `<line x1="${sx(10 ** e)}" x2="${sx(10 ** e)}" y1="${pad.t}" y2="${H - pad.b}" stroke="#e3e1db"/><text x="${sx(10 ** e)}" y="${H - pad.b + 14}" text-anchor="middle">${fmt(10 ** e)}</text>`;
+  for (let e = y0; e <= y1; e++) g += `<line x1="${pad.l}" x2="${W - pad.r}" y1="${sy(10 ** e)}" y2="${sy(10 ** e)}" stroke="#e3e1db"/><text x="${pad.l - 6}" y="${sy(10 ** e) + 4}" text-anchor="end">${fmt(10 ** e)}</text>`;
+  const selProv = S.areaKind === "preset" && S.preset && S.preset[0] === "V" ? CELLS.provinsi[+S.preset.slice(1)] : null;
+  const sorted = pts.slice().sort((a, b) => (a.p === selProv) - (b.p === selProv));
+  for (const p of sorted) {
+    const on = p.p === selProv;
+    g += `<circle cx="${sx(p.h)}" cy="${sy(p.ha)}" r="${on ? 6 : 4}" fill="${on ? "#151514" : "#f08853"}" fill-opacity="${on ? 1 : 0.7}" stroke="#fcfcfb" stroke-width="1.5"><title>${p.p} ${p.y}: ${fmt(p.h)} · ${fmt(p.ha)} ha</title></circle>`;
+  }
+  g += `<text x="${(pad.l + W - pad.r) / 2}" y="${H - 6}" text-anchor="middle">${t("sip_x")}</text>`;
+  g += `<text transform="translate(12,${(pad.t + H - pad.b) / 2}) rotate(-90)" text-anchor="middle">${t("sip_y")}</text>`;
+  if (selProv) g += `<g transform="translate(${pad.l + 8},${pad.t + 8})"><circle cx="5" cy="5" r="5" fill="#151514"/><text x="14" y="9">${selProv} (${t("sip_sel")})</text></g>`;
+  $("#ch-sip").innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${t("h_sip")}">${g}</svg>`;
+  const b = SIP.banding_2026;
+  $("#sip-txt").innerHTML = `<p>${t("sip_r", { n: SIP.n, r: SIP.r_log, s: SIP.spearman, rn: SIP.r_nasional })}</p>
+    <h3>${t("sip_26")}</h3>
+    <table class="sip"><tr><th></th><th>${t("sip_c1")}</th><th>${t("sip_c2")}</th></tr>
+    ${Object.entries(b).map(([y, v]) => `<tr><td>vs ${y}</td><td>+${v.sipongi_pct}%</td><td>+${v.apikala_pct}%</td></tr>`).join("")}</table>
+    <p class="note">${t("sip_ok")}</p>
+    <p class="note">${S.lang === "id" ? SIP.catatan : (SIP.catatan_en || SIP.catatan)}</p>
+    <p class="note">Sumber / Source: <a href="${SIP.url}" target="_blank" rel="noopener">SIPONGI KEMENHUT</a></p>`;
 }
 
 // ---------------------------------------------------------------- unduhan

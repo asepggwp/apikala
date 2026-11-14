@@ -46,6 +46,15 @@ data on 2 Nov 2026 and MODIS is near the end of its life, so the long record wil
 * **Validation**: leave-one-year-out. k is recomputed without year *y* and used to predict year *y*'s MODIS count
   (R², bias, median absolute % error), compared against using raw VIIRS. Results are shown in the app.
 
+## External check against official burned area (SIPONGI KEMENHUT)
+Harmonized hotspot counts were compared with the Indonesian Ministry of Forestry's official burned-area table
+(SIPONGI KEMENHUT, *Rekapitulasi Luas Kebakaran Hutan dan Lahan per Provinsi*, 2018–2026, 2026 to July):
+* **225 province-years (2018–2024): r = 0.825 on log scales, Spearman ρ = 0.859**; national by year r = 0.966.
+* Jan–Jul 2026 vs earlier years: SiPongi reports +47% vs 2019, +80% vs 2023, +69% vs 2025; ApiKala hotspots show
+  +12%, +55%, +56%. Same direction in all three cases (hotspots are not burned area, so magnitudes differ).
+* 2025 is excluded because the table's 2025 column contradicts the note on the same page (probably incomplete).
+* Script: `tools/validasi_sipongi.py`; data: `data/sipongi_luas_karhutla_2018_2026.csv` (source: SIPONGI KEMENHUT).
+
 ## Repository
 ```
 pipeline/harmonisasi.py      download → filter → aggregate → harmonize → validate → export
@@ -71,6 +80,7 @@ docs/                        static web app (GitHub Pages) (Leaflet + plain JS/S
 * NASA FIRMS: *We acknowledge the use of data and/or imagery from NASA's Fire Information for Resource Management System
   (FIRMS) (https://earthdata.nasa.gov/firms), part of NASA's Earth Science Data and Information System (ESDIS).*
   MODIS Collection 6.1 (MCD14), VIIRS 375 m (VNP14IMG, VJ114IMG, VJ214IMG).
+* Official burned area: SIPONGI KEMENHUT (https://sipongi.gakkum.kehutanan.go.id/indikasi-luas-kebakaran).
 * Province boundaries: geoBoundaries IDN ADM1, CC BY 4.0 (Runfola et al. 2020).
 * Basemap: © OpenStreetMap contributors. Map library: Leaflet (BSD-2).
 * NASA does not endorse this project.

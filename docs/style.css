@@ -91,3 +91,6 @@ table.cal{border-collapse:separate;border-spacing:2px;width:100%;min-width:560px
 .tip td:last-child{text-align:right;font-variant-numeric:tabular-nums}
 .foot{max-width:1400px;margin:0 auto 30px;padding:0 20px;color:var(--muted);font-size:12px}
 .bad{color:#8f1d1d}
+.sip{border-collapse:collapse;font-size:12px;margin:6px 0}
+.sip th,.sip td{border:1px solid var(--line);padding:3px 8px;text-align:right}
+.sip td:first-child,.sip th:first-child{text-align:left}
