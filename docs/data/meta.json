@@ -1,0 +1,1577 @@
+{
+ "dibuat": "2026-11-14 03:08 UTC",
+ "tanggal_data": "2026-11-14",
+ "bulan_awal": "2000-11",
+ "bulan_akhir": "2026-11",
+ "k": {
+  "Sumatra": [
+   0.2328,
+   0.1954,
+   0.1875,
+   0.2553,
+   0.2711,
+   0.2124,
+   0.2322,
+   0.2203,
+   0.1994,
+   0.158,
+   0.1982,
+   0.2064
+  ],
+  "Jawa-Bali": [
+   0.2436,
+   0.2477,
+   0.2847,
+   0.2873,
+   0.2054,
+   0.1532,
+   0.1429,
+   0.1327,
+   0.1377,
+   0.1241,
+   0.1314,
+   0.2602
+  ],
+  "Nusa Tenggara": [
+   0.1555,
+   0.1555,
+   0.1555,
+   0.1637,
+   0.1497,
+   0.1855,
+   0.2096,
+   0.172,
+   0.1557,
+   0.1418,
+   0.1263,
+   0.1398
+  ],
+  "Kalimantan": [
+   0.204,
+   0.1933,
+   0.1951,
+   0.2207,
+   0.2417,
+   0.227,
+   0.2305,
+   0.2263,
+   0.2198,
+   0.1761,
+   0.1986,
+   0.2141
+  ],
+  "Sulawesi": [
+   0.1769,
+   0.169,
+   0.1602,
+   0.1642,
+   0.1533,
+   0.1447,
+   0.1457,
+   0.1657,
+   0.19,
+   0.1843,
+   0.1851,
+   0.1862
+  ],
+  "Maluku": [
+   0.1577,
+   0.1431,
+   0.1358,
+   0.1743,
+   0.1641,
+   0.1757,
+   0.173,
+   0.1866,
+   0.1791,
+   0.1486,
+   0.1486,
+   0.1707
+  ],
+  "Papua": [
+   0.2055,
+   0.1877,
+   0.1538,
+   0.166,
+   0.2031,
+   0.1921,
+   0.2226,
+   0.2063,
+   0.2177,
+   0.2105,
+   0.2287,
+   0.2344
+  ]
+ },
+ "k_detail": [
+  {
+   "pulau": "Sumatra",
+   "bulan": 1,
+   "k": 0.2328,
+   "ci_lo": 0.1749,
+   "ci_hi": 0.3169,
+   "metode": "pulau-bulan",
+   "n_viirs": 16183,
+   "n_modis": 3768
+  },
+  {
+   "pulau": "Sumatra",
+   "bulan": 2,
+   "k": 0.1954,
+   "ci_lo": 0.1813,
+   "ci_hi": 0.2038,
+   "metode": "pulau-bulan",
+   "n_viirs": 74743,
+   "n_modis": 14603
+  },
+  {
+   "pulau": "Sumatra",
+   "bulan": 3,
+   "k": 0.1875,
+   "ci_lo": 0.1775,
+   "ci_hi": 0.2334,
+   "metode": "pulau-bulan",
+   "n_viirs": 95779,
+   "n_modis": 17956
+  },
+  {
+   "pulau": "Sumatra",
+   "bulan": 4,
+   "k": 0.2553,
+   "ci_lo": 0.2332,
+   "ci_hi": 0.2849,
+   "metode": "pulau-bulan",
+   "n_viirs": 16782,
+   "n_modis": 4284
+  },
+  {
+   "pulau": "Sumatra",
+   "bulan": 5,
+   "k": 0.2711,
+   "ci_lo": 0.2532,
+   "ci_hi": 0.3087,
+   "metode": "pulau-bulan",
+   "n_viirs": 17372,
+   "n_modis": 4709
+  },
+  {
+   "pulau": "Sumatra",
+   "bulan": 6,
+   "k": 0.2124,
+   "ci_lo": 0.1969,
+   "ci_hi": 0.2552,
+   "metode": "pulau-bulan",
+   "n_viirs": 115365,
+   "n_modis": 24499
+  },
+  {
+   "pulau": "Sumatra",
+   "bulan": 7,
+   "k": 0.2322,
+   "ci_lo": 0.2226,
+   "ci_hi": 0.2475,
+   "metode": "pulau-bulan",
+   "n_viirs": 90034,
+   "n_modis": 20910
+  },
+  {
+   "pulau": "Sumatra",
+   "bulan": 8,
+   "k": 0.2203,
+   "ci_lo": 0.2017,
+   "ci_hi": 0.2366,
+   "metode": "pulau-bulan",
+   "n_viirs": 148652,
+   "n_modis": 32754
+  },
+  {
+   "pulau": "Sumatra",
+   "bulan": 9,
+   "k": 0.1994,
+   "ci_lo": 0.18,
+   "ci_hi": 0.236,
+   "metode": "pulau-bulan",
+   "n_viirs": 234863,
+   "n_modis": 46835
+  },
+  {
+   "pulau": "Sumatra",
+   "bulan": 10,
+   "k": 0.158,
+   "ci_lo": 0.1344,
+   "ci_hi": 0.2018,
+   "metode": "pulau-bulan",
+   "n_viirs": 177289,
+   "n_modis": 28015
+  },
+  {
+   "pulau": "Sumatra",
+   "bulan": 11,
+   "k": 0.1982,
+   "ci_lo": 0.1473,
+   "ci_hi": 0.2416,
+   "metode": "pulau-bulan",
+   "n_viirs": 32266,
+   "n_modis": 6394
+  },
+  {
+   "pulau": "Sumatra",
+   "bulan": 12,
+   "k": 0.2064,
+   "ci_lo": 0.1785,
+   "ci_hi": 0.2281,
+   "metode": "pulau-bulan",
+   "n_viirs": 5183,
+   "n_modis": 1070
+  },
+  {
+   "pulau": "Jawa-Bali",
+   "bulan": 1,
+   "k": 0.2436,
+   "ci_lo": 0.1414,
+   "ci_hi": 0.3589,
+   "metode": "pulau-bulan",
+   "n_viirs": 431,
+   "n_modis": 105
+  },
+  {
+   "pulau": "Jawa-Bali",
+   "bulan": 2,
+   "k": 0.2477,
+   "ci_lo": 0.1717,
+   "ci_hi": 0.3235,
+   "metode": "pulau-bulan",
+   "n_viirs": 654,
+   "n_modis": 162
+  },
+  {
+   "pulau": "Jawa-Bali",
+   "bulan": 3,
+   "k": 0.2847,
+   "ci_lo": 0.1603,
+   "ci_hi": 0.4344,
+   "metode": "pulau-bulan",
+   "n_viirs": 966,
+   "n_modis": 275
+  },
+  {
+   "pulau": "Jawa-Bali",
+   "bulan": 4,
+   "k": 0.2873,
+   "ci_lo": 0.1756,
+   "ci_hi": 0.4457,
+   "metode": "pulau-bulan",
+   "n_viirs": 1058,
+   "n_modis": 304
+  },
+  {
+   "pulau": "Jawa-Bali",
+   "bulan": 5,
+   "k": 0.2054,
+   "ci_lo": 0.1348,
+   "ci_hi": 0.2918,
+   "metode": "pulau-bulan",
+   "n_viirs": 1704,
+   "n_modis": 350
+  },
+  {
+   "pulau": "Jawa-Bali",
+   "bulan": 6,
+   "k": 0.1532,
+   "ci_lo": 0.1333,
+   "ci_hi": 0.179,
+   "metode": "pulau-bulan",
+   "n_viirs": 3512,
+   "n_modis": 538
+  },
+  {
+   "pulau": "Jawa-Bali",
+   "bulan": 7,
+   "k": 0.1429,
+   "ci_lo": 0.1237,
+   "ci_hi": 0.171,
+   "metode": "pulau-bulan",
+   "n_viirs": 9803,
+   "n_modis": 1401
+  },
+  {
+   "pulau": "Jawa-Bali",
+   "bulan": 8,
+   "k": 0.1327,
+   "ci_lo": 0.1175,
+   "ci_hi": 0.1522,
+   "metode": "pulau-bulan",
+   "n_viirs": 19669,
+   "n_modis": 2611
+  },
+  {
+   "pulau": "Jawa-Bali",
+   "bulan": 9,
+   "k": 0.1377,
+   "ci_lo": 0.1285,
+   "ci_hi": 0.1451,
+   "metode": "pulau-bulan",
+   "n_viirs": 25402,
+   "n_modis": 3498
+  },
+  {
+   "pulau": "Jawa-Bali",
+   "bulan": 10,
+   "k": 0.1241,
+   "ci_lo": 0.1139,
+   "ci_hi": 0.135,
+   "metode": "pulau-bulan",
+   "n_viirs": 20403,
+   "n_modis": 2531
+  },
+  {
+   "pulau": "Jawa-Bali",
+   "bulan": 11,
+   "k": 0.1314,
+   "ci_lo": 0.097,
+   "ci_hi": 0.1614,
+   "metode": "pulau-bulan",
+   "n_viirs": 3989,
+   "n_modis": 524
+  },
+  {
+   "pulau": "Jawa-Bali",
+   "bulan": 12,
+   "k": 0.2602,
+   "ci_lo": 0.1653,
+   "ci_hi": 0.4224,
+   "metode": "pulau-bulan",
+   "n_viirs": 611,
+   "n_modis": 159
+  },
+  {
+   "pulau": "Nusa Tenggara",
+   "bulan": 1,
+   "k": 0.1555,
+   "ci_lo": 0.1479,
+   "ci_hi": 0.1617,
+   "metode": "pulau-tahunan",
+   "n_viirs": 285,
+   "n_modis": 49
+  },
+  {
+   "pulau": "Nusa Tenggara",
+   "bulan": 2,
+   "k": 0.1555,
+   "ci_lo": 0.1488,
+   "ci_hi": 0.1621,
+   "metode": "pulau-tahunan",
+   "n_viirs": 250,
+   "n_modis": 39
+  },
+  {
+   "pulau": "Nusa Tenggara",
+   "bulan": 3,
+   "k": 0.1555,
+   "ci_lo": 0.1481,
+   "ci_hi": 0.1624,
+   "metode": "pulau-tahunan",
+   "n_viirs": 238,
+   "n_modis": 50
+  },
+  {
+   "pulau": "Nusa Tenggara",
+   "bulan": 4,
+   "k": 0.1637,
+   "ci_lo": 0.1065,
+   "ci_hi": 0.2691,
+   "metode": "pulau-bulan",
+   "n_viirs": 739,
+   "n_modis": 121
+  },
+  {
+   "pulau": "Nusa Tenggara",
+   "bulan": 5,
+   "k": 0.1497,
+   "ci_lo": 0.1076,
+   "ci_hi": 0.1861,
+   "metode": "pulau-bulan",
+   "n_viirs": 3019,
+   "n_modis": 452
+  },
+  {
+   "pulau": "Nusa Tenggara",
+   "bulan": 6,
+   "k": 0.1855,
+   "ci_lo": 0.1621,
+   "ci_hi": 0.2184,
+   "metode": "pulau-bulan",
+   "n_viirs": 7063,
+   "n_modis": 1310
+  },
+  {
+   "pulau": "Nusa Tenggara",
+   "bulan": 7,
+   "k": 0.2096,
+   "ci_lo": 0.1868,
+   "ci_hi": 0.2284,
+   "metode": "pulau-bulan",
+   "n_viirs": 16753,
+   "n_modis": 3511
+  },
+  {
+   "pulau": "Nusa Tenggara",
+   "bulan": 8,
+   "k": 0.172,
+   "ci_lo": 0.1402,
+   "ci_hi": 0.1972,
+   "metode": "pulau-bulan",
+   "n_viirs": 31648,
+   "n_modis": 5442
+  },
+  {
+   "pulau": "Nusa Tenggara",
+   "bulan": 9,
+   "k": 0.1557,
+   "ci_lo": 0.1486,
+   "ci_hi": 0.1614,
+   "metode": "pulau-bulan",
+   "n_viirs": 51080,
+   "n_modis": 7953
+  },
+  {
+   "pulau": "Nusa Tenggara",
+   "bulan": 10,
+   "k": 0.1418,
+   "ci_lo": 0.1337,
+   "ci_hi": 0.1487,
+   "metode": "pulau-bulan",
+   "n_viirs": 71344,
+   "n_modis": 10119
+  },
+  {
+   "pulau": "Nusa Tenggara",
+   "bulan": 11,
+   "k": 0.1263,
+   "ci_lo": 0.1158,
+   "ci_hi": 0.1359,
+   "metode": "pulau-bulan",
+   "n_viirs": 22383,
+   "n_modis": 2827
+  },
+  {
+   "pulau": "Nusa Tenggara",
+   "bulan": 12,
+   "k": 0.1398,
+   "ci_lo": 0.121,
+   "ci_hi": 0.1803,
+   "metode": "pulau-bulan",
+   "n_viirs": 1180,
+   "n_modis": 165
+  },
+  {
+   "pulau": "Kalimantan",
+   "bulan": 1,
+   "k": 0.204,
+   "ci_lo": 0.1936,
+   "ci_hi": 0.2287,
+   "metode": "pulau-bulan",
+   "n_viirs": 9222,
+   "n_modis": 1881
+  },
+  {
+   "pulau": "Kalimantan",
+   "bulan": 2,
+   "k": 0.1933,
+   "ci_lo": 0.1488,
+   "ci_hi": 0.217,
+   "metode": "pulau-bulan",
+   "n_viirs": 18869,
+   "n_modis": 3648
+  },
+  {
+   "pulau": "Kalimantan",
+   "bulan": 3,
+   "k": 0.1951,
+   "ci_lo": 0.181,
+   "ci_hi": 0.215,
+   "metode": "pulau-bulan",
+   "n_viirs": 12964,
+   "n_modis": 2529
+  },
+  {
+   "pulau": "Kalimantan",
+   "bulan": 4,
+   "k": 0.2207,
+   "ci_lo": 0.2034,
+   "ci_hi": 0.239,
+   "metode": "pulau-bulan",
+   "n_viirs": 6792,
+   "n_modis": 1499
+  },
+  {
+   "pulau": "Kalimantan",
+   "bulan": 5,
+   "k": 0.2417,
+   "ci_lo": 0.2199,
+   "ci_hi": 0.2593,
+   "metode": "pulau-bulan",
+   "n_viirs": 7336,
+   "n_modis": 1773
+  },
+  {
+   "pulau": "Kalimantan",
+   "bulan": 6,
+   "k": 0.227,
+   "ci_lo": 0.2057,
+   "ci_hi": 0.241,
+   "metode": "pulau-bulan",
+   "n_viirs": 13399,
+   "n_modis": 3042
+  },
+  {
+   "pulau": "Kalimantan",
+   "bulan": 7,
+   "k": 0.2305,
+   "ci_lo": 0.2151,
+   "ci_hi": 0.2486,
+   "metode": "pulau-bulan",
+   "n_viirs": 45678,
+   "n_modis": 10528
+  },
+  {
+   "pulau": "Kalimantan",
+   "bulan": 8,
+   "k": 0.2263,
+   "ci_lo": 0.2076,
+   "ci_hi": 0.242,
+   "metode": "pulau-bulan",
+   "n_viirs": 199570,
+   "n_modis": 45157
+  },
+  {
+   "pulau": "Kalimantan",
+   "bulan": 9,
+   "k": 0.2198,
+   "ci_lo": 0.2136,
+   "ci_hi": 0.2289,
+   "metode": "pulau-bulan",
+   "n_viirs": 398224,
+   "n_modis": 87525
+  },
+  {
+   "pulau": "Kalimantan",
+   "bulan": 10,
+   "k": 0.1761,
+   "ci_lo": 0.1659,
+   "ci_hi": 0.2011,
+   "metode": "pulau-bulan",
+   "n_viirs": 250947,
+   "n_modis": 44199
+  },
+  {
+   "pulau": "Kalimantan",
+   "bulan": 11,
+   "k": 0.1986,
+   "ci_lo": 0.1843,
+   "ci_hi": 0.2141,
+   "metode": "pulau-bulan",
+   "n_viirs": 40571,
+   "n_modis": 8056
+  },
+  {
+   "pulau": "Kalimantan",
+   "bulan": 12,
+   "k": 0.2141,
+   "ci_lo": 0.1863,
+   "ci_hi": 0.2365,
+   "metode": "pulau-bulan",
+   "n_viirs": 4866,
+   "n_modis": 1042
+  },
+  {
+   "pulau": "Sulawesi",
+   "bulan": 1,
+   "k": 0.1769,
+   "ci_lo": 0.1429,
+   "ci_hi": 0.2041,
+   "metode": "pulau-bulan",
+   "n_viirs": 3924,
+   "n_modis": 694
+  },
+  {
+   "pulau": "Sulawesi",
+   "bulan": 2,
+   "k": 0.169,
+   "ci_lo": 0.1403,
+   "ci_hi": 0.1915,
+   "metode": "pulau-bulan",
+   "n_viirs": 3751,
+   "n_modis": 634
+  },
+  {
+   "pulau": "Sulawesi",
+   "bulan": 3,
+   "k": 0.1602,
+   "ci_lo": 0.1436,
+   "ci_hi": 0.1778,
+   "metode": "pulau-bulan",
+   "n_viirs": 4413,
+   "n_modis": 707
+  },
+  {
+   "pulau": "Sulawesi",
+   "bulan": 4,
+   "k": 0.1642,
+   "ci_lo": 0.1468,
+   "ci_hi": 0.1781,
+   "metode": "pulau-bulan",
+   "n_viirs": 3532,
+   "n_modis": 580
+  },
+  {
+   "pulau": "Sulawesi",
+   "bulan": 5,
+   "k": 0.1533,
+   "ci_lo": 0.1276,
+   "ci_hi": 0.1769,
+   "metode": "pulau-bulan",
+   "n_viirs": 3158,
+   "n_modis": 484
+  },
+  {
+   "pulau": "Sulawesi",
+   "bulan": 6,
+   "k": 0.1447,
+   "ci_lo": 0.1168,
+   "ci_hi": 0.167,
+   "metode": "pulau-bulan",
+   "n_viirs": 1970,
+   "n_modis": 285
+  },
+  {
+   "pulau": "Sulawesi",
+   "bulan": 7,
+   "k": 0.1457,
+   "ci_lo": 0.1173,
+   "ci_hi": 0.1684,
+   "metode": "pulau-bulan",
+   "n_viirs": 3630,
+   "n_modis": 529
+  },
+  {
+   "pulau": "Sulawesi",
+   "bulan": 8,
+   "k": 0.1657,
+   "ci_lo": 0.1454,
+   "ci_hi": 0.1797,
+   "metode": "pulau-bulan",
+   "n_viirs": 11274,
+   "n_modis": 1868
+  },
+  {
+   "pulau": "Sulawesi",
+   "bulan": 9,
+   "k": 0.19,
+   "ci_lo": 0.1745,
+   "ci_hi": 0.1989,
+   "metode": "pulau-bulan",
+   "n_viirs": 37938,
+   "n_modis": 7207
+  },
+  {
+   "pulau": "Sulawesi",
+   "bulan": 10,
+   "k": 0.1843,
+   "ci_lo": 0.1741,
+   "ci_hi": 0.1915,
+   "metode": "pulau-bulan",
+   "n_viirs": 53466,
+   "n_modis": 9853
+  },
+  {
+   "pulau": "Sulawesi",
+   "bulan": 11,
+   "k": 0.1851,
+   "ci_lo": 0.1762,
+   "ci_hi": 0.1917,
+   "metode": "pulau-bulan",
+   "n_viirs": 18120,
+   "n_modis": 3354
+  },
+  {
+   "pulau": "Sulawesi",
+   "bulan": 12,
+   "k": 0.1862,
+   "ci_lo": 0.1503,
+   "ci_hi": 0.2124,
+   "metode": "pulau-bulan",
+   "n_viirs": 5092,
+   "n_modis": 948
+  },
+  {
+   "pulau": "Maluku",
+   "bulan": 1,
+   "k": 0.1577,
+   "ci_lo": 0.1363,
+   "ci_hi": 0.222,
+   "metode": "pulau-bulan",
+   "n_viirs": 913,
+   "n_modis": 144
+  },
+  {
+   "pulau": "Maluku",
+   "bulan": 2,
+   "k": 0.1431,
+   "ci_lo": 0.1161,
+   "ci_hi": 0.1798,
+   "metode": "pulau-bulan",
+   "n_viirs": 678,
+   "n_modis": 97
+  },
+  {
+   "pulau": "Maluku",
+   "bulan": 3,
+   "k": 0.1358,
+   "ci_lo": 0.1095,
+   "ci_hi": 0.1817,
+   "metode": "pulau-bulan",
+   "n_viirs": 788,
+   "n_modis": 107
+  },
+  {
+   "pulau": "Maluku",
+   "bulan": 4,
+   "k": 0.1743,
+   "ci_lo": 0.125,
+   "ci_hi": 0.2397,
+   "metode": "pulau-bulan",
+   "n_viirs": 769,
+   "n_modis": 134
+  },
+  {
+   "pulau": "Maluku",
+   "bulan": 5,
+   "k": 0.1641,
+   "ci_lo": 0.1138,
+   "ci_hi": 0.2329,
+   "metode": "pulau-bulan",
+   "n_viirs": 774,
+   "n_modis": 127
+  },
+  {
+   "pulau": "Maluku",
+   "bulan": 6,
+   "k": 0.1757,
+   "ci_lo": 0.0887,
+   "ci_hi": 0.2946,
+   "metode": "pulau-bulan",
+   "n_viirs": 666,
+   "n_modis": 117
+  },
+  {
+   "pulau": "Maluku",
+   "bulan": 7,
+   "k": 0.173,
+   "ci_lo": 0.1256,
+   "ci_hi": 0.2048,
+   "metode": "pulau-bulan",
+   "n_viirs": 1422,
+   "n_modis": 246
+  },
+  {
+   "pulau": "Maluku",
+   "bulan": 8,
+   "k": 0.1866,
+   "ci_lo": 0.1355,
+   "ci_hi": 0.2173,
+   "metode": "pulau-bulan",
+   "n_viirs": 5402,
+   "n_modis": 1008
+  },
+  {
+   "pulau": "Maluku",
+   "bulan": 9,
+   "k": 0.1791,
+   "ci_lo": 0.15,
+   "ci_hi": 0.1945,
+   "metode": "pulau-bulan",
+   "n_viirs": 17455,
+   "n_modis": 3126
+  },
+  {
+   "pulau": "Maluku",
+   "bulan": 10,
+   "k": 0.1486,
+   "ci_lo": 0.1193,
+   "ci_hi": 0.1585,
+   "metode": "pulau-bulan",
+   "n_viirs": 22349,
+   "n_modis": 3321
+  },
+  {
+   "pulau": "Maluku",
+   "bulan": 11,
+   "k": 0.1486,
+   "ci_lo": 0.1365,
+   "ci_hi": 0.1576,
+   "metode": "pulau-bulan",
+   "n_viirs": 8437,
+   "n_modis": 1254
+  },
+  {
+   "pulau": "Maluku",
+   "bulan": 12,
+   "k": 0.1707,
+   "ci_lo": 0.1368,
+   "ci_hi": 0.2063,
+   "metode": "pulau-bulan",
+   "n_viirs": 1822,
+   "n_modis": 311
+  },
+  {
+   "pulau": "Papua",
+   "bulan": 1,
+   "k": 0.2055,
+   "ci_lo": 0.1685,
+   "ci_hi": 0.2082,
+   "metode": "pulau-bulan",
+   "n_viirs": 8213,
+   "n_modis": 1688
+  },
+  {
+   "pulau": "Papua",
+   "bulan": 2,
+   "k": 0.1877,
+   "ci_lo": 0.1495,
+   "ci_hi": 0.2262,
+   "metode": "pulau-bulan",
+   "n_viirs": 1332,
+   "n_modis": 250
+  },
+  {
+   "pulau": "Papua",
+   "bulan": 3,
+   "k": 0.1538,
+   "ci_lo": 0.1259,
+   "ci_hi": 0.2005,
+   "metode": "pulau-bulan",
+   "n_viirs": 1248,
+   "n_modis": 192
+  },
+  {
+   "pulau": "Papua",
+   "bulan": 4,
+   "k": 0.166,
+   "ci_lo": 0.1372,
+   "ci_hi": 0.2004,
+   "metode": "pulau-bulan",
+   "n_viirs": 1205,
+   "n_modis": 200
+  },
+  {
+   "pulau": "Papua",
+   "bulan": 5,
+   "k": 0.2031,
+   "ci_lo": 0.1746,
+   "ci_hi": 0.2335,
+   "metode": "pulau-bulan",
+   "n_viirs": 1881,
+   "n_modis": 382
+  },
+  {
+   "pulau": "Papua",
+   "bulan": 6,
+   "k": 0.1921,
+   "ci_lo": 0.1538,
+   "ci_hi": 0.2349,
+   "metode": "pulau-bulan",
+   "n_viirs": 1884,
+   "n_modis": 362
+  },
+  {
+   "pulau": "Papua",
+   "bulan": 7,
+   "k": 0.2226,
+   "ci_lo": 0.1945,
+   "ci_hi": 0.2539,
+   "metode": "pulau-bulan",
+   "n_viirs": 5300,
+   "n_modis": 1180
+  },
+  {
+   "pulau": "Papua",
+   "bulan": 8,
+   "k": 0.2063,
+   "ci_lo": 0.1622,
+   "ci_hi": 0.244,
+   "metode": "pulau-bulan",
+   "n_viirs": 14415,
+   "n_modis": 2974
+  },
+  {
+   "pulau": "Papua",
+   "bulan": 9,
+   "k": 0.2177,
+   "ci_lo": 0.2041,
+   "ci_hi": 0.2235,
+   "metode": "pulau-bulan",
+   "n_viirs": 44589,
+   "n_modis": 9705
+  },
+  {
+   "pulau": "Papua",
+   "bulan": 10,
+   "k": 0.2105,
+   "ci_lo": 0.2046,
+   "ci_hi": 0.2153,
+   "metode": "pulau-bulan",
+   "n_viirs": 64026,
+   "n_modis": 13478
+  },
+  {
+   "pulau": "Papua",
+   "bulan": 11,
+   "k": 0.2287,
+   "ci_lo": 0.2103,
+   "ci_hi": 0.2476,
+   "metode": "pulau-bulan",
+   "n_viirs": 20122,
+   "n_modis": 4602
+  },
+  {
+   "pulau": "Papua",
+   "bulan": 12,
+   "k": 0.2344,
+   "ci_lo": 0.2228,
+   "ci_hi": 0.2509,
+   "metode": "pulau-bulan",
+   "n_viirs": 12014,
+   "n_modis": 2816
+  }
+ ],
+ "k_TA": 3.5812,
+ "k_N20": 0.9768,
+ "k_N21": 0.9383,
+ "k_nasional": 0.1975,
+ "overlap": [
+  2012,
+  2021
+ ],
+ "bulan_mulai_viirs": "2012-01",
+ "bulan_aqua": "2002-07",
+ "sumber_viirs_pengganti": {
+  "2024-07": "N20",
+  "2026-11": "N20"
+ },
+ "validasi": {
+  "Indonesia (pulau×bulan)": {
+   "harmonis": {
+    "r": 0.988,
+    "r2": 0.969,
+    "bias_pct": 1.5,
+    "mape_pct": 14.6
+   },
+   "viirs_mentah": {
+    "r": 0.984,
+    "r2": -18.067,
+    "bias_pct": 405.7,
+    "mape_pct": 416.5
+   },
+   "n_bulan": 652
+  },
+  "Sumatra": {
+   "harmonis": {
+    "r": 0.975,
+    "r2": 0.912,
+    "bias_pct": 3.7,
+    "mape_pct": 12.7
+   },
+   "viirs_mentah": {
+    "r": 0.976,
+    "r2": -25.704,
+    "bias_pct": 397.8,
+    "mape_pct": 352.7
+   },
+   "n_bulan": 120
+  },
+  "Jawa-Bali": {
+   "harmonis": {
+    "r": 0.978,
+    "r2": 0.956,
+    "bias_pct": -1.9,
+    "mape_pct": 21.3
+   },
+   "viirs_mentah": {
+    "r": 0.983,
+    "r2": -72.566,
+    "bias_pct": 607.5,
+    "mape_pct": 537.4
+   },
+   "n_bulan": 86
+  },
+  "Nusa Tenggara": {
+   "harmonis": {
+    "r": 0.977,
+    "r2": 0.954,
+    "bias_pct": -0.2,
+    "mape_pct": 13.4
+   },
+   "viirs_mentah": {
+    "r": 0.974,
+    "r2": -66.962,
+    "bias_pct": 542.0,
+    "mape_pct": 545.4
+   },
+   "n_bulan": 71
+  },
+  "Kalimantan": {
+   "harmonis": {
+    "r": 0.996,
+    "r2": 0.991,
+    "bias_pct": 0.8,
+    "mape_pct": 12.1
+   },
+   "viirs_mentah": {
+    "r": 0.99,
+    "r2": -16.911,
+    "bias_pct": 378.2,
+    "mape_pct": 367.0
+   },
+   "n_bulan": 119
+  },
+  "Sulawesi": {
+   "harmonis": {
+    "r": 0.998,
+    "r2": 0.995,
+    "bias_pct": -0.7,
+    "mape_pct": 16.2
+   },
+   "viirs_mentah": {
+    "r": 0.998,
+    "r2": -21.792,
+    "bias_pct": 451.9,
+    "mape_pct": 481.8
+   },
+   "n_bulan": 110
+  },
+  "Maluku": {
+   "harmonis": {
+    "r": 0.99,
+    "r2": 0.952,
+    "bias_pct": -4.4,
+    "mape_pct": 15.4
+   },
+   "viirs_mentah": {
+    "r": 0.99,
+    "r2": -28.027,
+    "bias_pct": 510.8,
+    "mape_pct": 515.2
+   },
+   "n_bulan": 54
+  },
+  "Papua": {
+   "harmonis": {
+    "r": 0.998,
+    "r2": 0.996,
+    "bias_pct": -1.0,
+    "mape_pct": 15.1
+   },
+   "viirs_mentah": {
+    "r": 0.998,
+    "r2": -15.231,
+    "bias_pct": 364.2,
+    "mape_pct": 366.9
+   },
+   "n_bulan": 92
+  },
+  "Indonesia (nasional×bulan)": {
+   "harmonis": {
+    "r": 0.994,
+    "r2": 0.981,
+    "bias_pct": 1.6,
+    "mape_pct": 7.3
+   },
+   "viirs_mentah": {
+    "r": 0.99,
+    "r2": -22.496,
+    "bias_pct": 406.4,
+    "mape_pct": 384.6
+   },
+   "n_bulan": 120
+  }
+ },
+ "saringan": {
+  "MODIS": "confidence >= 30, type = 0",
+  "VIIRS": "confidence nominal/high, type = 0",
+  "grid": "0,25° (±28 km)",
+  "wilayah": "sel yang dipetakan ke 34 provinsi (geoBoundaries)"
+ },
+ "asal_data": [
+  {
+   "sensor": "MODIS",
+   "tahun": 2000,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 691,
+   "lolos_saring": 507,
+   "baris": 507
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2001,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 15078,
+   "lolos_saring": 12668,
+   "baris": 12668
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2002,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 123327,
+   "lolos_saring": 112275,
+   "baris": 112275
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2003,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 62751,
+   "lolos_saring": 56595,
+   "baris": 56595
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2004,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 107117,
+   "lolos_saring": 96686,
+   "baris": 96686
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2005,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 74797,
+   "lolos_saring": 59948,
+   "baris": 59948
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2006,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 154985,
+   "lolos_saring": 137004,
+   "baris": 137004
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2007,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 43224,
+   "lolos_saring": 39362,
+   "baris": 39362
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2008,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 41161,
+   "lolos_saring": 37598,
+   "baris": 37598
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2009,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 102344,
+   "lolos_saring": 93176,
+   "baris": 93176
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2010,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 20792,
+   "lolos_saring": 18119,
+   "baris": 18119
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2011,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 62790,
+   "lolos_saring": 57462,
+   "baris": 57462
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2012,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 71135,
+   "lolos_saring": 65188,
+   "baris": 65188
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2013,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 53852,
+   "lolos_saring": 49131,
+   "baris": 49131
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2014,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 115121,
+   "lolos_saring": 100197,
+   "baris": 100197
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2015,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 178578,
+   "lolos_saring": 149819,
+   "baris": 149819
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2016,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 24061,
+   "lolos_saring": 20447,
+   "baris": 20447
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2017,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 17823,
+   "lolos_saring": 15427,
+   "baris": 15427
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2018,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 38074,
+   "lolos_saring": 33016,
+   "baris": 33016
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2019,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 90475,
+   "lolos_saring": 80150,
+   "baris": 80150
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2020,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 16201,
+   "lolos_saring": 12092,
+   "baris": 12092
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2021,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 14210,
+   "lolos_saring": 10669,
+   "baris": 10669
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2022,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 11279,
+   "lolos_saring": 8100,
+   "baris": 8100
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2023,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 52156,
+   "lolos_saring": 44808,
+   "baris": 44808
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2024,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 23542,
+   "lolos_saring": 18214,
+   "baris": 18214
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2025,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 17847,
+   "lolos_saring": 14162,
+   "baris": 14162
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2026,
+   "asal": "API",
+   "baris_mentah": 149175,
+   "lolos_saring": 136872,
+   "baris": 128675
+  },
+  {
+   "sensor": "SNPP",
+   "tahun": 2012,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 318613,
+   "lolos_saring": 289775,
+   "baris": 289775
+  },
+  {
+   "sensor": "SNPP",
+   "tahun": 2013,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 257222,
+   "lolos_saring": 235397,
+   "baris": 235397
+  },
+  {
+   "sensor": "SNPP",
+   "tahun": 2014,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 555597,
+   "lolos_saring": 506915,
+   "baris": 506915
+  },
+  {
+   "sensor": "SNPP",
+   "tahun": 2015,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 875824,
+   "lolos_saring": 812329,
+   "baris": 812329
+  },
+  {
+   "sensor": "SNPP",
+   "tahun": 2016,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 117250,
+   "lolos_saring": 101899,
+   "baris": 101899
+  },
+  {
+   "sensor": "SNPP",
+   "tahun": 2017,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 90849,
+   "lolos_saring": 77006,
+   "baris": 77006
+  },
+  {
+   "sensor": "SNPP",
+   "tahun": 2018,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 191173,
+   "lolos_saring": 166835,
+   "baris": 166834
+  },
+  {
+   "sensor": "SNPP",
+   "tahun": 2019,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 437281,
+   "lolos_saring": 395044,
+   "baris": 395044
+  },
+  {
+   "sensor": "SNPP",
+   "tahun": 2020,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 91536,
+   "lolos_saring": 74844,
+   "baris": 74844
+  },
+  {
+   "sensor": "SNPP",
+   "tahun": 2021,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 68325,
+   "lolos_saring": 55062,
+   "baris": 55062
+  },
+  {
+   "sensor": "SNPP",
+   "tahun": 2022,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 57220,
+   "lolos_saring": 44811,
+   "baris": 44811
+  },
+  {
+   "sensor": "SNPP",
+   "tahun": 2023,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 253388,
+   "lolos_saring": 217583,
+   "baris": 217583
+  },
+  {
+   "sensor": "SNPP",
+   "tahun": 2024,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 104186,
+   "lolos_saring": 83282,
+   "baris": 83282
+  },
+  {
+   "sensor": "SNPP",
+   "tahun": 2025,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 96056,
+   "lolos_saring": 79412,
+   "baris": 79412
+  },
+  {
+   "sensor": "SNPP",
+   "tahun": 2026,
+   "asal": "API",
+   "baris_mentah": 684129,
+   "lolos_saring": 638074,
+   "baris": 594351
+  },
+  {
+   "sensor": "N20",
+   "tahun": 2018,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 181069,
+   "lolos_saring": 155469,
+   "baris": 155469
+  },
+  {
+   "sensor": "N20",
+   "tahun": 2019,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 437645,
+   "lolos_saring": 390952,
+   "baris": 390952
+  },
+  {
+   "sensor": "N20",
+   "tahun": 2020,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 93213,
+   "lolos_saring": 76570,
+   "baris": 76570
+  },
+  {
+   "sensor": "N20",
+   "tahun": 2021,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 71063,
+   "lolos_saring": 57589,
+   "baris": 57589
+  },
+  {
+   "sensor": "N20",
+   "tahun": 2022,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 63803,
+   "lolos_saring": 50337,
+   "baris": 50337
+  },
+  {
+   "sensor": "N20",
+   "tahun": 2023,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 250312,
+   "lolos_saring": 214626,
+   "baris": 214626
+  },
+  {
+   "sensor": "N20",
+   "tahun": 2024,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 116040,
+   "lolos_saring": 93178,
+   "baris": 93178
+  },
+  {
+   "sensor": "N20",
+   "tahun": 2025,
+   "asal": "arsip-tahunan",
+   "baris_mentah": 94458,
+   "lolos_saring": 77227,
+   "baris": 77227
+  },
+  {
+   "sensor": "N20",
+   "tahun": 2026,
+   "asal": "API",
+   "baris_mentah": 738756,
+   "lolos_saring": 683340,
+   "baris": 625397
+  },
+  {
+   "sensor": "N21",
+   "tahun": 2024,
+   "asal": "tidak-ada",
+   "baris": 0
+  },
+  {
+   "sensor": "N21",
+   "tahun": 2025,
+   "asal": "API",
+   "baris_mentah": 112340,
+   "lolos_saring": 106421,
+   "baris": 90367
+  },
+  {
+   "sensor": "N21",
+   "tahun": 2026,
+   "asal": "API",
+   "baris_mentah": 724700,
+   "lolos_saring": 681405,
+   "baris": 627730
+  },
+  {
+   "sensor": "MODIS",
+   "tahun": 2026,
+   "asal": "API",
+   "jendela_SP": 49,
+   "jendela_NRT": 15
+  },
+  {
+   "sensor": "SNPP",
+   "tahun": 2026,
+   "asal": "API",
+   "jendela_SP": 43,
+   "jendela_NRT": 21
+  },
+  {
+   "sensor": "N20",
+   "tahun": 2026,
+   "asal": "API",
+   "jendela_SP": 43,
+   "jendela_NRT": 21
+  },
+  {
+   "sensor": "N21",
+   "tahun": 2025,
+   "asal": "API",
+   "jendela_SP": 0,
+   "jendela_NRT": 73
+  },
+  {
+   "sensor": "N21",
+   "tahun": 2026,
+   "asal": "API",
+   "jendela_SP": 0,
+   "jendela_NRT": 64
+  }
+ ],
+ "sumber": [
+  "NASA FIRMS — MODIS Collection 6.1 (MCD14) active fire, Terra & Aqua",
+  "NASA FIRMS — VIIRS 375 m (VNP14IMG/VJ114IMG/VJ214IMG) S-NPP, NOAA-20, NOAA-21",
+  "geoBoundaries IDN ADM1 (CC BY 4.0)"
+ ]
+}

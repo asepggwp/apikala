@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ApiKala — Indonesia's harmonized fire calendar (MODIS + VIIRS)</title>
+<meta name="description" content="Kalender aktivitas titik api Indonesia 2000–sekarang dari data NASA FIRMS MODIS dan VIIRS yang diharmonisasi.">
+<link rel="stylesheet" href="vendor/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="logo" aria-hidden="true">🔥</span>
+    <div>
+      <h1>ApiKala</h1>
+      <p class="sub" data-i="tagline">Satu catatan titik api yang konsisten sejak 2000: MODIS + VIIRS diharmonisasi</p>
+    </div>
+  </div>
+  <div class="top-actions">
+    <button id="btn-lang" class="ghost" aria-label="Ganti bahasa / switch language">EN</button>
+  </div>
+</header>
+
+<section class="problem">
+  <p data-i="problem">Petugas karhutla perlu tahu: <b>apakah titik api di wilayahnya bulan ini tidak biasa, dan kapan musim rawannya?</b>
+  Catatan satelit 20+ tahun terpecah di dua sensor yang angkanya tidak sebanding — VIIRS (375 m) mencatat jauh lebih banyak titik daripada MODIS (1 km) untuk kebakaran yang sama.
+  Aplikasi ini menyamakan keduanya ke satu satuan (<b>setara MODIS</b>), lalu menyajikannya sebagai kalender.</p>
+</section>
+
+<main class="layout">
+  <aside class="panel" aria-label="Pilih wilayah">
+    <h2 data-i="h_area">1. Pilih wilayah</h2>
+    <div class="tabs" role="tablist">
+      <button role="tab" class="tab on" data-mode="prov" data-i="tab_prov">Provinsi</button>
+      <button role="tab" class="tab" data-mode="box" data-i="tab_box">Gambar kotak</button>
+      <button role="tab" class="tab" data-mode="pt" data-i="tab_pt">Koordinat</button>
+    </div>
+    <div class="mode" id="mode-prov">
+      <label for="sel-prov" data-i="lbl_prov">Provinsi / pulau</label>
+      <select id="sel-prov"></select>
+      <p class="hint" data-i="hint_prov">Atau klik provinsi di peta.</p>
+    </div>
+    <div class="mode" id="mode-box" hidden>
+      <button id="btn-draw" class="primary" data-i="btn_draw">✏️ Mulai gambar kotak</button>
+      <p class="hint" data-i="hint_box">Klik tombol, lalu tekan-dan-seret di peta untuk menggambar area.</p>
+    </div>
+    <div class="mode" id="mode-pt" hidden>
+      <div class="row3">
+        <label><span data-i="lbl_lat">Lintang</span><input id="in-lat" type="number" step="0.01" value="-2.21"></label>
+        <label><span data-i="lbl_lon">Bujur</span><input id="in-lon" type="number" step="0.01" value="113.92"></label>
+        <label><span data-i="lbl_rad">Radius (km)</span><input id="in-rad" type="number" step="5" min="10" max="500" value="50"></label>
+      </div>
+      <button id="btn-pt" class="primary" data-i="btn_pt">Terapkan</button>
+    </div>
+    <div id="map" aria-label="Peta"></div>
+    <div class="map-legend" id="map-legend"></div>
+
+    <h2 data-i="h_range">2. Rentang tahun</h2>
+    <div class="row2">
+      <label><span data-i="lbl_from">Dari</span><select id="y0"></select></label>
+      <label><span data-i="lbl_to">Sampai</span><select id="y1"></select></label>
+    </div>
+  </aside>
+
+  <section class="content">
+    <div class="area-title"><span data-i="area">Wilayah</span>: <b id="area-name">—</b> <span class="muted" id="area-cells"></span></div>
+
+    <div class="tiles" id="tiles"></div>
+
+    <article class="card">
+      <div class="card-head">
+        <h2 data-i="h_cal">Kalender aktivitas api</h2>
+        <div class="seg" role="group" aria-label="Tampilan">
+          <button class="seg-b on" data-view="jumlah" data-i="v_count">Jumlah titik</button>
+          <button class="seg-b" data-view="anomali" data-i="v_anom">Anomali vs median</button>
+        </div>
+        <label class="chk"><input type="checkbox" id="chk-num"> <span data-i="show_num">tampilkan angka</span></label>
+      </div>
+      <p class="note" data-i="cal_note">Setiap kotak = jumlah titik api (setara MODIS) dalam satu bulan. Arahkan kursor untuk rincian per sensor.</p>
+      <div class="cal-wrap"><table class="cal" id="cal"></table></div>
+      <div class="legend" id="cal-legend"></div>
+    </article>
+
+    <div class="two">
+      <article class="card">
+        <h2 data-i="h_season">Musim api: median per bulan</h2>
+        <p class="note" data-i="season_note">Batang = median tahun terpilih, garis = rentang 25–75%, titik = tahun yang disorot.</p>
+        <div id="ch-season" class="chart"></div>
+        <label class="inline"><span data-i="lbl_hl">Sorot tahun</span> <select id="sel-hl"></select></label>
+      </article>
+      <article class="card">
+        <h2 data-i="h_year">Total per tahun</h2>
+        <p class="note" data-i="year_note">Garis abu-abu = data mentah tiap sensor; batang = hasil harmonisasi.</p>
+        <div id="ch-year" class="chart"></div>
+        <label class="chk"><input type="checkbox" id="chk-rawv"> <span data-i="show_rawv">tampilkan VIIRS mentah (belum diharmonisasi)</span></label>
+      </article>
+    </div>
+
+    <article class="card">
+      <h2 data-i="h_dl">Unduh data</h2>
+      <div class="dl">
+        <div>
+          <h3 data-i="dl1_t">Tabel bulanan wilayah ini (CSV)</h3>
+          <p class="note" data-i="dl1_d">Per bulan: MODIS mentah, VIIRS mentah, faktor k, nilai harmonis, median, anomali.</p>
+          <button id="btn-csv" class="primary" data-i="dl1_b">⬇ Unduh CSV bulanan</button>
+        </div>
+        <div>
+          <h3 data-i="dl2_t">Titik api mentah dari NASA FIRMS (CSV)</h3>
+          <p class="note" data-i="dl2_d">Ambil titik api asli untuk wilayah &amp; tanggal pilihan langsung dari FIRMS API. Butuh MAP_KEY gratis milik Anda (tidak disimpan).</p>
+          <div class="row3">
+            <label><span>MAP_KEY</span><input id="in-key" type="password" autocomplete="off" placeholder="32 karakter"></label>
+            <label><span data-i="lbl_from">Dari</span><input id="in-d0" type="date"></label>
+            <label><span data-i="lbl_to">Sampai</span><input id="in-d1" type="date"></label>
+          </div>
+          <label><span data-i="lbl_src">Sensor</span>
+            <select id="in-src">
+              <option value="VIIRS_NOAA20_NRT">VIIRS NOAA-20 (NRT)</option>
+              <option value="VIIRS_NOAA21_NRT">VIIRS NOAA-21 (NRT)</option>
+              <option value="VIIRS_NOAA20_SP">VIIRS NOAA-20 (SP)</option>
+              <option value="VIIRS_SNPP_SP">VIIRS S-NPP (SP, s.d. 2 Nov 2026)</option>
+              <option value="MODIS_NRT">MODIS (NRT)</option>
+              <option value="MODIS_SP">MODIS (SP)</option>
+            </select>
+          </label>
+          <button id="btn-raw" class="primary" data-i="dl2_b">⬇ Ambil &amp; unduh titik api</button>
+          <p class="note" id="raw-status" aria-live="polite"></p>
+        </div>
+      </div>
+    </article>
+
+    <article class="card method">
+      <h2 data-i="h_method">Bagaimana harmonisasinya?</h2>
+      <div id="method"></div>
+    </article>
+  </section>
+</main>
+
+<footer class="foot">
+  <p data-i="foot">Data: NASA FIRMS (MODIS C6.1, VIIRS 375 m S-NPP/NOAA-20/NOAA-21), batas provinsi geoBoundaries (CC BY 4.0), peta dasar © OpenStreetMap. Dibuat oleh Tim Occupy Mars untuk NASA Space Apps Challenge 2026. NASA tidak mendukung (endorse) proyek ini.</p>
+</footer>
+
+<div id="tip" class="tip" role="tooltip" hidden></div>
+<script src="vendor/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
