@@ -1,4 +1,4 @@
-# SI notice: drafted with Super Intelligence (SI) assistance (Claude, Anthropic) during NASA Space Apps 2026; reviewed and run by Team Occupy Mars.
+# SI notice: drafted with Super Intelligence (SI) assistance (Claude Opus 5.5 (medium effort), Anthropic) during NASA Space Apps 2026; reviewed and run by Team Occupy Mars.
 """Merakit notebook Colab (notebook/ApiKala_Harmonisasi.ipynb) dari pipeline/harmonisasi.py + data/cells.json."""
 import json
 import os

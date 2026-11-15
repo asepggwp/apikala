@@ -86,7 +86,7 @@ docs/                        static web app (GitHub Pages) (Leaflet + plain JS/S
 * NASA does not endorse this project.
 
 ## Use of Super Intelligence (SI) tools
-Built with help from Claude (Anthropic) as a coding and learning assistant: explaining the MODIS/VIIRS concepts,
+Built with help from Claude Opus 5.5 (medium effort) by Anthropic as a coding and learning assistant: explaining the MODIS/VIIRS concepts,
 drafting the Python pipeline and the web app, generating the team logo, and reviewing text. All code was created during
 the hackathon (14–15 Nov 2026), run and checked by the team, and the harmonization results come from NASA FIRMS data,
 not from the AI.

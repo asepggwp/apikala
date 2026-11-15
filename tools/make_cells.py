@@ -1,4 +1,4 @@
-# SI notice: drafted with Super Intelligence (SI) assistance (Claude, Anthropic) during NASA Space Apps 2026; reviewed and run by Team Occupy Mars.
+# SI notice: drafted with Super Intelligence (SI) assistance (Claude Opus 5.5 (medium effort), Anthropic) during NASA Space Apps 2026; reviewed and run by Team Occupy Mars.
 """Membuat peta sel grid 0,25 derajat -> provinsi & pulau (data/cells.json).
 
 Batas provinsi: geoBoundaries IDN ADM1 (CC BY 4.0).
