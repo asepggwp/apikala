@@ -1,3 +1,4 @@
+# SI notice: drafted with Super Intelligence (SI) assistance (Claude, Anthropic) during NASA Space Apps 2026; reviewed and run by Team Occupy Mars.
 """Validasi eksternal: titik api harmonis ApiKala vs luas karhutla resmi SIPONGI KEMENHUT (2018–2026).
 Pakai: python tools/validasi_sipongi.py  → docs/data/sipongi.json
 """

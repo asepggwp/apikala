@@ -1,5 +1,7 @@
 /* ApiKala — web app (tanpa framework).
    Data: data/grid.json (deret jarang per sel 0,25°), data/meta.json (faktor k, validasi), data/cells.json, data/provinsi.geojson */
+/* SI notice: this code was drafted with Super Intelligence (SI) assistance (Claude, Anthropic)
+   during NASA Space Apps 2026 (14–15 Nov 2026), then reviewed, run and tested by Team Occupy Mars. */
 "use strict";
 
 // ---------------------------------------------------------------- teks ID / EN
@@ -23,7 +25,7 @@ const T = {
     dl2_t: "Titik api mentah dari NASA FIRMS (CSV)",
     dl2_d: "Ambil titik api asli untuk wilayah & tanggal pilihan langsung dari FIRMS API. Butuh MAP_KEY gratis milik Anda (tidak disimpan).",
     dl2_b: "⬇ Ambil & unduh titik api", lbl_src: "Sensor", h_method: "Bagaimana harmonisasinya?",
-    foot: "Data: NASA FIRMS (MODIS C6.1, VIIRS 375 m S-NPP/NOAA-20/NOAA-21), batas provinsi geoBoundaries (CC BY 4.0), peta dasar © kontributor OpenStreetMap. Dibuat oleh Tim Occupy Mars untuk NASA Space Apps Challenge 2026. NASA tidak mendukung (endorse) proyek ini.",
+    foot: "Data: NASA FIRMS (MODIS C6.1, VIIRS 375 m S-NPP/NOAA-20/NOAA-21), batas provinsi geoBoundaries (CC BY 4.0), peta dasar © kontributor OpenStreetMap. Dibuat oleh Tim Occupy Mars untuk NASA Space Apps Challenge 2026. NASA tidak mendukung (endorse) proyek ini. Kode situs ini dibuat dengan bantuan SI (Claude, Anthropic).",
     all_idn: "Seluruh Indonesia", island: "Pulau", province: "Provinsi", box: "Kotak gambar", circle: "Radius",
     cells: "sel grid", t_total: "Total titik api", t_total_d: "setara MODIS, {a}–{b}",
     t_peak: "Puncak musim api", t_peak_d: "bulan dengan median tertinggi",
@@ -66,7 +68,7 @@ const T = {
     dl2_t: "Raw hotspots from NASA FIRMS (CSV)",
     dl2_d: "Fetch the original hotspots for the chosen area & dates straight from the FIRMS API. Needs your free MAP_KEY (not stored).",
     dl2_b: "⬇ Fetch & download hotspots", lbl_src: "Sensor", h_method: "How is it harmonized?",
-    foot: "Data: NASA FIRMS (MODIS C6.1, VIIRS 375 m S-NPP/NOAA-20/NOAA-21), province boundaries geoBoundaries (CC BY 4.0), basemap © OpenStreetMap. Built by Team Occupy Mars for the NASA Space Apps Challenge 2026. NASA does not endorse this project.",
+    foot: "Data: NASA FIRMS (MODIS C6.1, VIIRS 375 m S-NPP/NOAA-20/NOAA-21), province boundaries geoBoundaries (CC BY 4.0), basemap © OpenStreetMap. Built by Team Occupy Mars for the NASA Space Apps Challenge 2026. NASA does not endorse this project. Site code drafted with SI assistance (Claude, Anthropic).",
     all_idn: "All of Indonesia", island: "Island", province: "Province", box: "Drawn box", circle: "Radius",
     cells: "grid cells", t_total: "Total hotspots", t_total_d: "MODIS-equivalent, {a}–{b}",
     t_peak: "Peak fire month", t_peak_d: "month with the highest median",

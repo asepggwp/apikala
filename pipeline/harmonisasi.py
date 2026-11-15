@@ -1,3 +1,4 @@
+# SI notice: drafted with Super Intelligence (SI) assistance (Claude, Anthropic) during NASA Space Apps 2026; reviewed and run by Team Occupy Mars.
 """
 ApiKala — pipeline harmonisasi titik api MODIS–VIIRS (Indonesia)
 NASA Space Apps Challenge 2026 · Tim Occupy Mars
